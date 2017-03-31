@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Snake
+{
+    class Program
+    {
+        static void Main()
+        {
+            Point p = new Point();
+
+            p.x = 20;
+            p.y = 7;
+            p.symbol = '$';
+            p.Draw();
+
+            
+
+            
+            Console.ReadKey();
+        }
+
+        
+    }
+}
