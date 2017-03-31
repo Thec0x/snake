@@ -10,11 +10,8 @@ namespace Snake
     {
         static void Main()
         {
-            Point p = new Point();
+            Point p = new Point(20, 7, '$');
 
-            p.x = 20;
-            p.y = 7;
-            p.symbol = '$';
             p.Draw();
 
             
