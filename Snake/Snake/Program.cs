@@ -14,18 +14,31 @@ namespace Snake
 
             //p.Draw();
 
-            int x = 1;
-            Funx(x);
-            Console.WriteLine("x = {0} ", x);
+            List<int> numList = new List<int>();
+            numList.Add( 10 );
+            numList.Add( 1 );
+            numList.Add( 2 );
+
+            List<Point> pList = new List<Point>();
+            pList.Add(p);
+
+
+
+
+            int x = numList[0];
+
+            Console.WriteLine(x);
+
+            foreach (int i in numList)
+            {
+                Console.WriteLine(i);
+            }
+
+
+            
 
             
             Console.ReadKey();
         }
-
-        static void Funx(int x)
-        {
-            x += 1;
-        }
-
     }
 }
