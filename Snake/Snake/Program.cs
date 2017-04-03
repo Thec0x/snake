@@ -30,7 +30,10 @@ namespace Snake
             v2Line.Draw();
 
             Point p = new Point(20, 7, '$');
-            p.Draw();
+            //p.Draw();
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Draw();
+
 
             Console.ReadKey();
         }

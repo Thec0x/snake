@@ -25,5 +25,24 @@ namespace Snake
             symbol = _symbol;
         }
 
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            symbol = p.symbol;
+        }
+
+        public void Move(int offset, Direction direction)
+        {
+            if (direction == Direction.RIGHT)
+                x += offset;
+            if (direction == Direction.LEFT)
+                x -= offset;
+            if (direction == Direction.UP)
+                y += offset;
+            if (direction == Direction.DOWN)
+                y -= offset;
+        }
+
     }
 }
