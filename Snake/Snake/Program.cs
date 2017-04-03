@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Snake
@@ -29,27 +30,21 @@ namespace Snake
             VerticalLine v2Line = new VerticalLine(0, 24, 78, '#');
             v2Line.Draw();
 
-            Point p = new Point(20, 7, '$');
+            Point p = new Point(4, 5, '*');
             //p.Draw();
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Draw();
-            snake.Move();
-            System.Threading.Thread.Sleep(300);
-            snake.Move();
-            System.Threading.Thread.Sleep(300);
-            snake.Move();
-            System.Threading.Thread.Sleep(300);
-            snake.Move();
-            System.Threading.Thread.Sleep(300);
-            snake.Move();
-            System.Threading.Thread.Sleep(300);
-            snake.Move();
-            System.Threading.Thread.Sleep(300);
-            snake.Move();
-            System.Threading.Thread.Sleep(300);
-            snake.Move();
-            System.Threading.Thread.Sleep(300);
-
+            
+            while(true)
+            {
+                if(Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey(true);
+                    snake.Handl(key.Key);
+                }
+                Thread.Sleep(100);
+                snake.Move();
+            }
 
 
             Console.ReadKey();
