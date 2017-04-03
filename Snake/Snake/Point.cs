@@ -44,5 +44,12 @@ namespace Snake
                 y -= offset;
         }
 
+        public void Clear()
+        {
+            symbol = ' ';
+            Draw();
+        }
+
+
     }
 }
